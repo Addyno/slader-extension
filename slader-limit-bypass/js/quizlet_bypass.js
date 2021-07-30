@@ -24,7 +24,6 @@ function checkIfNewAccountNeeded()
     }
 }
 
-
 function signUpNewAccount(doesReload)
 {
     // We're just gonna assume this is a large enough characterspace for it to never matter.

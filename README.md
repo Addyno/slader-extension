@@ -7,6 +7,12 @@
   - Firefox : 90.0
 - Test time : 2021/07/14
 
+# WARNING:
+
+This extension logs you out of your normal quizlet account.
+
+You can disable and re-enable it by going to `chrome://extensions/` on chrome and `about:addons` in firefox.
+
 # Screenshot
 
 ## Before install

@@ -1,6 +1,6 @@
 {
   "name": "slader bypass",
-  "version": "0.8",
+  "version": "0.10",
   "author":"Alan Li & Ethan Harvey",
   "description": "Slader/Quizlet 5 solutions limit bypass",
   "permissions": [
@@ -21,7 +21,7 @@
     },
     {
       "matches": ["*://quizlet.com/explanations/questions/*", "*://quizlet.com/explanations/textbook-solutions/*/*"],
-      "js": ["js/katex/katex.js", "js/katex/autorender.js", "js/quizlet_bypass.js"]
+      "js": ["js/quizlet_bypass.js"]
   }
 ],
   "manifest_version": 2

@@ -54,7 +54,7 @@ or use
 
  	git clone https://github.com/lebr0nli/slader-extension.git
 
-2. Select the file **slader_bypass-0.7-fx.xpi** in **slader-extension-main** 
+2. Select the file **slader_bypass-0.10-fx.xpi** in **slader-extension-main** 
 
 3. Drag the file into the URL bar, click "add" when prompted
 

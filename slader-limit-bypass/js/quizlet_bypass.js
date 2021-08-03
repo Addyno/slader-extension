@@ -11,6 +11,7 @@ function checkIfNewAccountNeeded()
     // Almost out of solutions
     if (pageContains("This is your last free explanation"))
     {
+        // Don't reload, not actually out of solutions yet.
         signUpNewAccount(false);
     }
     // Not logged in
@@ -20,6 +21,18 @@ function checkIfNewAccountNeeded()
     }
     // Out of solutions
     else if (pageContains("YOU'VE REACHED YOUR FREE LIMIT"))
+    {
+        signUpNewAccount(true);
+    }
+
+
+    // Catchall for logged out entirely.
+    else if (!isLoggedIn())
+    {
+        signUpNewAccount(true);
+    }
+    // Catchall for out of solutions
+    else if (pageContains('source=explanations_meter_exceeded'))
     {
         signUpNewAccount(true);
     }
@@ -79,5 +92,24 @@ function pageContains(str)
     else
     {
         return false;
+    }
+}
+
+function isLoggedIn()
+{
+    // Looks for `{"LOGGED_IN":false,` in the header.
+    var li = document.head.innerHTML.match(/(?<="LOGGED_IN":)\w[^,]*/)[0];
+
+    if (li === "false")
+    {
+        return false;
+    }
+    else if (li === "true")
+    {
+        return true;
+    }
+    else
+    {
+        return true; // Return true on possible error to prevent explosion of accounts. Effectively assumes logged in on error.
     }
 }
